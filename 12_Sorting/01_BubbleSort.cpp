@@ -14,22 +14,27 @@ void bubbleSort(vector<int> &v)
 {
   for (int i = 0; i < v.size() - 1; i++)
   {
-    //current element = v[i];
+    bool isSwaped = false;
+    // current element = v[i];
     for (int j = i + 1; j < v.size(); j++)
     {
       // If current element is greater then next we swap both positions.
       if (v[i] > v[j])
+      {
         swap(v[i], v[j]);
+        isSwaped = true;
+      }
     }
+    if(!isSwaped) return;
   }
 }
 
 int main()
 {
-  vector<int> v = {4,1,5,2,3};
+  vector<int> v = {4, 1, 5, 2, 3};
   printList(v);
   bubbleSort(v);
-  cout<<"\n\n";
+  cout << "\n\n";
   printList(v);
   return 0;
 }
