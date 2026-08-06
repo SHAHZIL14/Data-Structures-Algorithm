@@ -1,1 +1,1 @@
-current
+while(pivot+1<rightMost) swap(nums[pivot++],nums[rightMost--]);
